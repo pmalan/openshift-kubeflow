@@ -5060,7 +5060,7 @@ spec:
 # Source: seldon-core-operator/templates/webhook.yaml
 ---
 
-apiVersion: admissionregistration.k8s.io/v1beta1
+apiVersion: admissionregistration.k8s.io/v11
 kind: ValidatingWebhookConfiguration
 metadata:
   annotations:

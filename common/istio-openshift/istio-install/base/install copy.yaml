@@ -83,6 +83,20 @@ spec:
       install:
         storage:
            type: memory
+        #  type: Elasticsearch # or Memory
+        #  memory:
+        #    maxTraces: 10000
+        #  elasticsearch:
+        #    nodeCount: 3
+        #    resources:
+        #      requests:
+        #        cpu: 200m
+        #        memory: 1Gi
+        #      limits:
+        #        memory: 1Gi
+        #    storage: {}
+            redundancyPolicy: SingleRedundancy
+            indexCleaner: {}
         ingress: {} # jaeger ingress configuration
   runtime:
     components:
