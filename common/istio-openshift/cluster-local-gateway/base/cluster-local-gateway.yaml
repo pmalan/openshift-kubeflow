@@ -198,11 +198,11 @@ spec:
         - mountPath: /etc/istio/ingressgateway-ca-certs
           name: ingressgateway-ca-certs
           readOnly: true
-      securityContext:
-        fsGroup: 1337
-        runAsGroup: 1337
-        runAsNonRoot: true
-        runAsUser: 1337
+      #securityContext:
+      #  fsGroup: 1337
+      #  runAsGroup: 1337
+      #  runAsNonRoot: true
+      #  runAsUser: 1337
       serviceAccountName: cluster-local-gateway-service-account
       volumes:
       - configMap:
@@ -296,7 +296,7 @@ subjects:
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
+  annotations: {}
   labels:
     app: cluster-local-gateway
     install.operator.istio.io/owning-resource: unknown

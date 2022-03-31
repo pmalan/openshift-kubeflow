@@ -1,6 +1,6 @@
 ---
 # Source: flink-operator/templates/flink-operator.yaml
-apiVersion: admissionregistration.k8s.io/v11
+apiVersion: admissionregistration.k8s.io/v1beta1
 kind: MutatingWebhookConfiguration
 metadata:
   creationTimestamp: null
@@ -26,7 +26,7 @@ webhooks:
     - flinkclusters
 ---
 # Source: flink-operator/templates/flink-operator.yaml
-apiVersion: admissionregistration.k8s.io/v11
+apiVersion: admissionregistration.k8s.io/v1beta1
 kind: ValidatingWebhookConfiguration
 metadata:
   creationTimestamp: null

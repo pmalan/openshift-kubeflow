@@ -1,43 +1,18 @@
-# Kubeflow Manifests for Openshift
-
-Based on  
+# Kubeflow Manifests
 
 ## Table of Contents
 
 <!-- toc -->
 
-- [Kubeflow Manifests for Openshift](#kubeflow-manifests-for-openshift)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Kubeflow components versions](#kubeflow-components-versions)
-  - [Installation](#installation)
-    - [Prerequisites](#prerequisites)
-    - [Install with a single command](#install-with-a-single-command)
-    - [Install individual components](#install-individual-components)
-      - [cert-manager](#cert-manager)
-      - [Istio](#istio)
-      - [Dex](#dex)
-      - [OIDC AuthService](#oidc-authservice)
-      - [Knative](#knative)
-      - [Kubeflow Namespace](#kubeflow-namespace)
-      - [Kubeflow Roles](#kubeflow-roles)
-      - [Kubeflow Istio Resources](#kubeflow-istio-resources)
-      - [Kubeflow Pipelines](#kubeflow-pipelines)
-      - [KFServing](#kfserving)
-      - [Katib](#katib)
-      - [Central Dashboard](#central-dashboard)
-      - [Admission Webhook](#admission-webhook)
-      - [Notebooks](#notebooks)
-      - [Profiles + KFAM](#profiles--kfam)
-      - [Volumes Web App](#volumes-web-app)
-      - [Tensorboard](#tensorboard)
-      - [Training Operator](#training-operator)
-      - [User Namespace](#user-namespace)
-    - [Connect to your Kubeflow Cluster](#connect-to-your-kubeflow-cluster)
-      - [Port-Forward](#port-forward)
-      - [NodePort / LoadBalancer / Ingress](#nodeport--loadbalancer--ingress)
-    - [Change default user password](#change-default-user-password)
-  - [Frequently Asked Questions](#frequently-asked-questions)
+- [Overview](#overview)
+- [Kubeflow components versions](#kubeflow-components-versions)
+- [Installation](#installation)
+  * [Prerequisites](#prerequisites)
+  * [Install with a single command](#install-with-a-single-command)
+  * [Install individual components](#install-individual-components)
+  * [Connect to your Kubeflow Cluster](#connect-to-your-kubeflow-cluster)
+  * [Change default user password](#change-default-user-password)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
 <!-- tocstop -->
 
