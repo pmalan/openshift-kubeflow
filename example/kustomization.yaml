@@ -9,7 +9,7 @@ resources:
 - ../common/istio-openshift/istio-crds/base
 - ../common/istio-openshift/istio-namespace/base
 - ../common/istio-openshift/istio-install/base
-
+- ../common/istio-openshift/kubeflow-istio-resources/base
 # OIDC Authservice
 #- ../common/oidc-authservice/base
 # Dex
