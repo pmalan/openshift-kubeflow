@@ -9,6 +9,8 @@ resources:
 
 commonLabels:
   kustomize.component: profiles
+  apps: profiles
+  version: "1"
 
 patchesStrategicMerge:
 - patches/kfam.yaml

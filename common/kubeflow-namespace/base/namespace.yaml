@@ -5,3 +5,6 @@ metadata:
   labels:
     control-plane: kubeflow
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    kubernetes.io/metadata.name: kubeflow
+    maistra.io/member-of: istio-system

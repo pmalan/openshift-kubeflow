@@ -15,6 +15,7 @@ commonLabels:
   app: centraldashboard
   app.kubernetes.io/component: centraldashboard
   app.kubernetes.io/name: centraldashboard
+  version: "1"
 images:
 - name: public.ecr.aws/j1r0q0g6/notebooks/central-dashboard
   newName: public.ecr.aws/j1r0q0g6/notebooks/central-dashboard

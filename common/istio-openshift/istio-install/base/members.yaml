@@ -7,3 +7,4 @@ spec:
   members:
     - kubeflow
     - knative-serving
+    - auth

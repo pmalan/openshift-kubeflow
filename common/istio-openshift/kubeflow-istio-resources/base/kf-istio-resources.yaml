@@ -8,11 +8,11 @@ spec:
   servers:
   - port:
       number: 443
-      name: https
-      protocol: HTTPS
+      name: http
+      protocol: HTTP
     hosts:
     - "*"
-    tls:
-      mode: SIMPLE
-      serverCertificate: /tmp/tls.crt
-      privateKey: /tmp/tls.key
+    #tls:
+    #  mode: SIMPLE
+    #  serverCertificate: /tmp/tls.crt
+    #  privateKey: /tmp/tls.key
