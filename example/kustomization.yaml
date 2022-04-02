@@ -10,10 +10,15 @@ resources:
 - ../common/istio-openshift/istio-namespace/base
 - ../common/istio-openshift/istio-install/base
 - ../common/istio-openshift/kubeflow-istio-resources/base
+# SSO Operator
+- ../common/openshift-sso/namespace
+- ../common/openshift-sso/base
 # OIDC Authservice
-#- ../common/oidc-authservice/base
+- ../common/oidc-authservice/base
 # Dex
 #- ../common/dex/overlays/istio
+# SSO
+- ../contrib/dex-auth/keycloak-gatekeeper/base
 # KNative
 - ../common/knative-openshift/base
 #- ../common/knative/knative-serving/base
@@ -56,5 +61,5 @@ resources:
 - ../common/user-namespace/base
 
 # KServe
-#- ../contrib/kserve/kserve
-#- ../contrib/kserve/models-web-app/overlays/kubeflow
+- ../contrib/kserve/kserve
+- ../contrib/kserve/models-web-app/overlays/kubeflow

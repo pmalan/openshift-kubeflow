@@ -16,10 +16,10 @@ spec:
       annotations:
         checksum/config: 485074e1c0607eca69f97a813313e55bce27515a65f57b11036c8dd074ea3a30
     spec:
-      securityContext:
-        fsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
+      #securityContext:
+      #  fsGroup: 1000
+      #  runAsNonRoot: true
+      #  runAsUser: 1000
       containers:
       - name: main
         image: keycloak/keycloak-gatekeeper:5.0.0

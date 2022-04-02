@@ -1,0 +1,30 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  namespace: sso
+  name: kubeflow-realm
+spec:
+  instanceSelector:
+    matchLabels:
+      app: sso
+  realm:
+    enabled: true
+    users:
+      - lastName: kubeflow
+        enabled: true
+        emailVerified: true
+        realmRoles:
+          - offline_access
+        username: kubeflow
+        firstName: kubeflow
+        credentials:
+          - type: password
+            value: kubeflow
+        clientRoles:
+          account:
+            - "manage-account"
+          realm-management:
+            - "manage-users"
+    displayName: Kubeflow Realm
+    realm: kubeflow
+    id: kubeflow
