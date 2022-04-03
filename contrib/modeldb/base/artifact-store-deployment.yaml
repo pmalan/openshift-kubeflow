@@ -18,7 +18,7 @@ spec:
         app: modeldb
         tier: artifact-store
       annotations:
-        sidecar.istio.io/inject: "false"
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - env:

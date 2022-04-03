@@ -6,8 +6,7 @@ metadata:
     release: istio
 spec:
   selector:
-    app: cluster-local-gateway
-    istio: cluster-local-gateway
+    istio: ingressgateway
   servers:
   - port:
       number: 80

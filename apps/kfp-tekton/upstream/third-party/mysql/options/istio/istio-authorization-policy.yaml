@@ -27,6 +27,4 @@ metadata:
   name: ml-pipeline-mysql
 spec:
   host: mysql.kubeflow.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
+  

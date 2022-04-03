@@ -77,9 +77,7 @@ metadata:
   name: ml-pipeline-ui
 spec:
   host: ml-pipeline-ui.kubeflow.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
+  
 ---
 apiVersion: "networking.istio.io/v1alpha3"
 kind: DestinationRule
@@ -87,9 +85,7 @@ metadata:
   name: ml-pipeline
 spec:
   host: ml-pipeline.kubeflow.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
+  
 ---
 apiVersion: "networking.istio.io/v1alpha3"
 kind: DestinationRule
@@ -97,6 +93,4 @@ metadata:
   name: ml-pipeline-visualizationserver
 spec:
   host: ml-pipeline-visualizationserver.kubeflow.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
+  
