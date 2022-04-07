@@ -13,6 +13,8 @@ spec:
     metadata:
       labels:
         app: cache-server
+      annotations:
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: server
