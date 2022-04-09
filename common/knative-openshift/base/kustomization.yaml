@@ -7,4 +7,5 @@ resources:
 - knative-serving-crd.yaml
 - knative-eventing-crd.yaml
 #- gateway-selectors.yaml
+- gateway.yaml
 
