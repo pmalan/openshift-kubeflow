@@ -17,7 +17,7 @@ spec:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "8080"
-        sidecar.istio.io/inject: "false"
+        sidecar.istio.io/inject: "true"
     spec:
       serviceAccountName: katib-controller
       containers:

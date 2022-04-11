@@ -1,0 +1,5 @@
+namespaces
+operators
+servicemesh
+serverless
+cert-manager

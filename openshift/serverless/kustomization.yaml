@@ -2,18 +2,18 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-# KNative
-- ../../common/knative-openshift/base
-#- ../common/knative/knative-serving/base
-#- ../common/knative/knative-serving/overlays/gateways
-#- ../common/knative/knative-eventing/base
-- ../../common/istio-openshift/cluster-local-gateway/base
-# Kubeflow namespace
-- ../../common/kubeflow-namespace/base
-# Kubeflow Roles
-- ../../common/kubeflow-roles/base
-# Kubeflow Istio Resources
-- ../../common/istio-openshift/kubeflow-istio-resources/base
-# KServe
-#- ../../contrib/kserve/kserve
-#- ../../contrib/kserve/models-web-app/overlays/kubeflow
+- knative-eventing-crd.yaml
+- knative-serving-crd.yaml
+- eventing-post-install-jobs.yaml
+- istio-authorization-policy.yaml
+- cluster-role-patch-eventing.yaml
+- cluster-role-patch-serving.yaml
+- net-istio.yaml
+- config-deployment.yaml
+
+patches:
+- patches/gateway.yaml
+- patches/clusterrole-patch.yaml
+- patches/configmap-patch.yaml
+- patches/service-labels.yaml
+#- patches/sidecar-injection.yaml

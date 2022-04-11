@@ -1,6 +1,8 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
+  labels:
+    operators.coreos.com/grafana-operator.istio-system: ''
   name: grafana-operator
   namespace: istio-system
 spec:
@@ -9,4 +11,4 @@ spec:
   name: grafana-operator
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: grafana-operator.v2.0.0
+  

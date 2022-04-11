@@ -17,7 +17,7 @@ spec:
       labels:
         katib.kubeflow.org/component: mysql
       annotations:
-        sidecar.istio.io/inject: "false"
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - name: katib-mysql

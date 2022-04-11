@@ -2134,7 +2134,7 @@ spec:
             cpu: 2000m
             memory: 1024Mi
           requests:
-            cpu: 10m
+            cpu: 100m
             memory: 40Mi
         securityContext:
           allowPrivilegeEscalation: false
@@ -2316,7 +2316,7 @@ spec:
           timeoutSeconds: 5
         resources:
           requests:
-            cpu: 10m
+            cpu: 100m
             memory: 100Mi
         securityContext:
           capabilities:

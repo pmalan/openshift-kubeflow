@@ -1,13 +1,13 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
+  name: openshift-pipelines-operator-rh
+  namespace: openshift-operators
   labels:
-    operators.coreos.com/rhsso-operator.sso: ''
-  name: rhsso-operator
-  namespace: sso
+    operators.coreos.com/openshift-pipelines-operator-rh.openshift-operators: ''
 spec:
   channel: stable
   installPlanApproval: Automatic
-  name: rhsso-operator
+  name: openshift-pipelines-operator-rh
   source: redhat-operators
   sourceNamespace: openshift-marketplace

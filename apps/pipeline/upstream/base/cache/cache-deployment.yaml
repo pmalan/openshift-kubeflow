@@ -72,7 +72,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8443
-          name: webhook-api
+          name: https-webhook
         volumeMounts:
         - name: webhook-tls-certs
           mountPath: /etc/webhook/certs

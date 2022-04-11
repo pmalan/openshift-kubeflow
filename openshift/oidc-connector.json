@@ -1,0 +1,17 @@
+[
+ {
+   "id": "keycloak",
+   "name": "OpenID Connect",
+   "type": "oidc",
+   "config": {
+     "issuer": "<ISSUER>",
+     "clientID": "<CLIENT_NAME>",
+     "clientSecret": "<CLIENT_SECRET>",
+     "redirectURI": "<DEX_CALLBACK>",
+     "userNameKey": "preferred_username",
+     "scopes": [
+       <SCOPES>
+     ]
+   }
+ }
+]

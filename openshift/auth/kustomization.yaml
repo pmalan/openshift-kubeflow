@@ -3,9 +3,8 @@ kind: Kustomization
 
 resources:
 
-# SSO Operator
-- ../../common/openshift-sso/namespace
-- ../../common/openshift-sso/base
+# SSO Realm
+- sso-realm.yaml
 # OIDC Authservice
 - ../../common/oidc-authservice/base
 # Dex

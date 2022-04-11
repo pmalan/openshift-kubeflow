@@ -7,4 +7,4 @@ spec:
     app: cache-server
   ports:
     - port: 443
-      targetPort: webhook-api
+      targetPort: tcp-cache

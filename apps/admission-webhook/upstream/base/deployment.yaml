@@ -6,7 +6,7 @@ spec:
   template:
     metadata:
       annotations:
-        sidecar.istio.io/inject: "false"
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: public.ecr.aws/j1r0q0g6/notebooks/admission-webhook
