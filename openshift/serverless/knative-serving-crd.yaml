@@ -6,4 +6,13 @@ metadata:
 spec:
   ingress:
     istio:
-      enabled: true
+      enabled: true 
+  deployments: 
+  - name: activator
+    annotations:
+      "sidecar.istio.io/inject": "true"
+      "sidecar.istio.io/rewriteAppHTTPProbers": "true"
+  - name: autoscaler
+    annotations:
+      "sidecar.istio.io/inject": "true"
+      "sidecar.istio.io/rewriteAppHTTPProbers": "true"
