@@ -16,9 +16,6 @@ kind: Gateway
 metadata:
   name: knative-local-gateway
   namespace: knative-serving
-  labels:
-    serving.knative.dev/release: "devel"
-    networking.knative.dev/ingress-provider: istio
 spec:
   selector:
     istio: ingressgateway
@@ -36,8 +33,7 @@ metadata:
   name: knative-local-gateway
   namespace: istio-system
   labels:
-    serving.knative.dev/release: "devel"
-    networking.knative.dev/ingress-provider: istio
+    experimental.istio.io/disable-gateway-port-translation: "true"
 spec:
   type: ClusterIP
   selector:
@@ -204,62 +200,7 @@ data:
     # If true, knative will use the Istio VirtualService's status to determine
     # endpoint readiness. Otherwise, probe as usual.
     enable-virtualservice-status: "false"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: networking-istio
-  namespace: knative-serving
-  labels:
-    serving.knative.dev/release: "devel"
-    networking.knative.dev/ingress-provider: istio
-spec:
-  selector:
-    matchLabels:
-      app: networking-istio
-  template:
-    metadata:
-      annotations:
-        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
-        sidecar.istio.io/inject: "false"
-      labels:
-        app: networking-istio
-        serving.knative.dev/release: "devel"
-    spec:
-      serviceAccountName: controller
-      containers:
-        - name: networking-istio
-          image: gcr.io/knative-releases/knative.dev/net-istio/cmd/controller@sha256:ff8680da52ef47b8573ebc3393cbfa2f0f14b05c1e02232807f22699adbef57a
-          resources:
-            requests:
-              cpu: 30m
-              memory: 40Mi
-            limits:
-              cpu: 300m
-              memory: 400Mi
-          env:
-            - name: SYSTEM_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
-            - name: CONFIG_LOGGING_NAME
-              value: config-logging
-            - name: CONFIG_OBSERVABILITY_NAME
-              value: config-observability
-            - name: METRICS_DOMAIN
-              value: knative.dev/net-istio
-          securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            runAsNonRoot: true
-            capabilities:
-              drop:
-                - all
-          ports:
-            - name: metrics
-              containerPort: 9090
-            - name: profiling
-              containerPort: 8008
+
 ---
 apiVersion: apps/v1
 kind: Deployment
