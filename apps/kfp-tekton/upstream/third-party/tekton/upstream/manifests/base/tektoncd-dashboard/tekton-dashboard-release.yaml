@@ -375,9 +375,9 @@ spec:
               port: 9097
       nodeSelector:
         kubernetes.io/os: linux
-      securityContext:
-        runAsNonRoot: true
-        runAsUser: 65532
+      #securityContext:
+      #  runAsNonRoot: true
+      #  runAsUser: 65532
       serviceAccountName: tekton-dashboard
       volumes: []
 

@@ -651,8 +651,8 @@ spec:
         heritage: "Helm"
         role: master
     spec:      
-      securityContext:
-        fsGroup: 1001
+      #securityContext:
+      #  fsGroup: 1001
       initContainers:
         # - name: do-something
         #   image: busybox
@@ -764,8 +764,8 @@ spec:
         checksum/configmap: 2694f00f7d90b157fe8a55b1fef4fdac62061e59d606f4182a6dab35be93cb86
         checksum/secret: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
     spec:      
-      securityContext:
-        fsGroup: 1001
+      #securityContext:
+      #  fsGroup: 1001
       serviceAccountName: "default"
       containers:
       - name: kf-feast-redis
@@ -895,8 +895,8 @@ spec:
         checksum/configmap: 2694f00f7d90b157fe8a55b1fef4fdac62061e59d606f4182a6dab35be93cb86
         checksum/secret: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
     spec:      
-      securityContext:
-        fsGroup: 1001
+      #securityContext:
+      #  fsGroup: 1001
       serviceAccountName: "default"
       containers:
       - name: kf-feast-redis

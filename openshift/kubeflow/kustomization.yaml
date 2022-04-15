@@ -34,4 +34,5 @@ resources:
 - ../../contrib/kserve/models-web-app/overlays/kubeflow
 #- ../../common/istio-openshift/istio-install/base openshift-kubeflow/apps/admission-webhook/upstream/base
 
-
+  
+              
