@@ -22,6 +22,11 @@ spec:
         command:
           - /manager
         env:
+          - name: ADD_FSGROUP
+            valueFrom:
+              configMapKeyRef:
+                name: notebook-controller-config-m44cmb547t
+                key: ADD_FSGROUP
           - name: USE_ISTIO
             valueFrom:
               configMapKeyRef:
