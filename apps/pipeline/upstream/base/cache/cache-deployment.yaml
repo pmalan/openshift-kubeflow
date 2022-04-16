@@ -13,8 +13,6 @@ spec:
     metadata:
       labels:
         app: cache-server
-      annotations:
-        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - name: server
@@ -72,7 +70,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8443
-          name: https-webhook
+          name: webhook-api
         volumeMounts:
         - name: webhook-tls-certs
           mountPath: /etc/webhook/certs

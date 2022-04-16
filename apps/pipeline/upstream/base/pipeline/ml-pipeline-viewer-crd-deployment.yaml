@@ -14,7 +14,6 @@ spec:
         app: ml-pipeline-viewer-crd
       annotations:
         cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
-        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: gcr.io/ml-pipeline/viewer-crd-controller:dummy

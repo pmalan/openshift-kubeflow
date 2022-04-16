@@ -25,6 +25,4 @@ metadata:
   name: ml-pipeline-minio
 spec:
   host: minio-service.kubeflow.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
+  

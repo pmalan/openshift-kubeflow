@@ -9,7 +9,6 @@ spec:
   - port: 80
     protocol: TCP
     targetPort: 8082
-    name: http
   selector:
     app: centraldashboard
   sessionAffinity: None

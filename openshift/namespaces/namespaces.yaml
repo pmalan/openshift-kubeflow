@@ -29,6 +29,8 @@ metadata:
   labels:
     control-plane: kubeflow
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    maistra.io/member-of: istio-system
   annotations:
     openshift.io/description: ''
     openshift.io/display-name: 'Kubeflow'
@@ -40,6 +42,8 @@ metadata:
   name: auth
   labels:
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    maistra.io/member-of: istio-system
   annotations:
     openshift.io/description: ''
     openshift.io/display-name: Authentication
@@ -51,6 +55,8 @@ metadata:
   name: knative-serving
   labels:
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    maistra.io/member-of: istio-system
   annotations:
     openshift.io/description: ''
     openshift.io/display-name: 'Knative Serving'
@@ -62,6 +68,8 @@ metadata:
   name: knative-eventing
   labels:
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    maistra.io/member-of: istio-system
   annotations:
     openshift.io/description: ''
     openshift.io/display-name: 'Knative Eventing'
@@ -73,6 +81,8 @@ metadata:
   name: kserve
   labels:
     istio-injection: enabled
+    kiali.io/member-of: istio-system
+    maistra.io/member-of: istio-system
   annotations:
     openshift.io/description: ''
     openshift.io/display-name: 'Kubeflow KServe'

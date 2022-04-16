@@ -5,5 +5,5 @@ metadata:
 spec:
   ports:
   - name: https-webhook
-    port: 4443
+    port: 443
     targetPort: https-webhook

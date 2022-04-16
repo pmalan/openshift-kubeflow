@@ -5,4 +5,3 @@ metadata:
 spec:
   ports:
     - port: 8081
-      name: http

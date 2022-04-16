@@ -14,7 +14,6 @@ spec:
         app: ml-pipeline-ui
       annotations:
         cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
-        sidecar.istio.io/inject: "true"
     spec:
       volumes:
       - name: config-volume
@@ -75,6 +74,6 @@ spec:
           timeoutSeconds: 2
         resources:
           requests:
-            cpu: 100m
+            cpu: 10m
             memory: 70Mi
       serviceAccountName: ml-pipeline-ui

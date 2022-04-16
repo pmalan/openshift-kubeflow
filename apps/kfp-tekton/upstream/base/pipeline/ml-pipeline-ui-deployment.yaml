@@ -76,6 +76,6 @@ spec:
           timeoutSeconds: 2
         resources:
           requests:
-            cpu: 100m
+            cpu: 10m
             memory: 70Mi
       serviceAccountName: ml-pipeline-ui
