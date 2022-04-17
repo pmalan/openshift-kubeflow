@@ -1,4 +1,4 @@
-# Kubeflow Manifests
+# Kubeflow Manifests Openshift
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 
 ## Overview
 
-This repo is owned by the [Manifests Working Group](https://github.com/kubeflow/community/blob/master/wg-manifests/charter.md).
+This repo is copy of the https://github.com/kubeflow/manifests/tree/v1.5-branch .
 If you are a contributor authoring or editing the packages please see [Best Practices](./docs/KustomizeBestPractices.md).
 
 The Kubeflow Manifests repository is organized under three (3) main directories, which include manifests for installing:
