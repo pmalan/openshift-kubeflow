@@ -3,3 +3,5 @@ operators
 servicemesh
 serverless
 cert-manager
+auth
+kubeflow
